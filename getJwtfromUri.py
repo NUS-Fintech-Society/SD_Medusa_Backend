@@ -30,7 +30,7 @@ def get_jwt_from_uri(uri):
         "grant_type": "authorization_code",
         "client_id": client_id,
         "code" : authorization_code,
-        "redirect_uri": "https://localhost"
+        "redirect_uri": "http://localhost:3000"
     }
 
     # Make the POST request

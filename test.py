@@ -5,5 +5,5 @@ from getRoleFromJwt import get_role_from_jwt
 #credentials to perform further S3 operations
 tokens = get_jwt_from_uri("")
 credentials = get_role_from_jwt(tokens)
-#print(tokens)
-#print(credentials)
+print(tokens)
+print(credentials)
