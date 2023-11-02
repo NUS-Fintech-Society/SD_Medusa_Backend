@@ -9,15 +9,15 @@ load_dotenv()
 #If you mess up you will have to click on "View Hosted UI" again to generate another uri as this function will no longer work after the first time.
 #Returns a dictionary of tokens 
 
-def getJWTfromUri(uri):
+def get_jwt_from_uri(uri):
     domain = os.getenv("DOMAIN")
     client_id = os.getenv("CLIENT_ID")
 
-    #Get the code from the url
+    #Get the code from the uri
     start_index = uri.index('code=') + len('code=')
     authorization_code = uri[start_index:]
 
-    # Construct the token endpoint URL
+    # Construct the token endpoint URI
     token_endpoint = f"https://{domain}/oauth2/token"
 
     # Set the headers
